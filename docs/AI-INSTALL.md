@@ -2,7 +2,7 @@
 
 This document is for an AI agent (OpenCode, Claude Code, Codex, Cursor, Tern, …) that is asked to
 install, connect, update, verify or remove ChatToFree (`c2f`) on a user's Windows machine. Read it
-completely before running anything. The human-facing overview is `README.md` (Turkish).
+completely before running anything. The human-facing overview is `README.md` (Turkish) / `README.en.md` (English).
 
 ## 0. What you are installing
 
