@@ -54,11 +54,13 @@ def rich(s):
 
 
 def wrap(s, width, size):
-    # ponytail: width from an average glyph size, not real font metrics; keep ~10% slack in the boxes
+    # ponytail: width from an average glyph size, not real font metrics; keep ~10% slack in the boxes.
+    # Monospace counts 1.2x: Menlo / DejaVu Sans Mono (macOS, Linux readers) are ~0.6em wide, Consolas 0.55em.
     s = re.sub(r"`[^`]+`|\*\*[^*]+\*\*", lambda m: m.group(0).replace(" ", "\u00a0"), s)
+    units = lambda x: len(re.sub(r"`|\*\*", "", x)) + 0.2 * sum(map(len, re.findall(r"`([^`]+)`", x)))
     per, lines, cur = max(8, int(width / (size * 0.53))), [], ""
     for word in s.split(" "):
-        if cur and len(re.sub(r"`|\*\*", "", f"{cur} {word}")) > per:
+        if cur and units(f"{cur} {word}") > per:
             lines.append(cur)
             cur = word
         else:
