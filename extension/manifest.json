@@ -1,0 +1,53 @@
+{
+  "manifest_version": 3,
+  "name": "ChatToFree Bridge",
+  "version": "0.13.0",
+  "description": "Lets the local ChatToFree CLI ask your logged-in ChatGPT / Claude / Gemini / DeepSeek tabs, so no API keys are needed.",
+  "permissions": [
+    "tabs",
+    "storage",
+    "alarms",
+    "scripting",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://chatgpt.com/*",
+    "https://chat.openai.com/*",
+    "https://claude.ai/*",
+    "https://gemini.google.com/*",
+    "https://chat.deepseek.com/*",
+    "http://127.0.0.1/*",
+    "http://localhost/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://chat.openai.com/*",
+        "https://claude.ai/*",
+        "https://gemini.google.com/*",
+        "https://chat.deepseek.com/*",
+        "http://127.0.0.1/*",
+        "http://localhost/*"
+      ],
+      "js": [
+        "sites.js",
+        "custom-sites.js",
+        "controls.js",
+        "settings.js",
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
+  "action": {
+    "default_title": "ChatToFree Bridge"
+  }
+}

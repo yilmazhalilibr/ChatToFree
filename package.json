@@ -1,0 +1,22 @@
+{
+  "name": "chattofree",
+  "version": "0.1.0",
+  "description": "Drive web chat models (ChatGPT, Claude, Gemini, DeepSeek) as a coding API from your terminal, with a small local model as the middleman.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "c2f": "./src/cli.js"
+  },
+  "main": "./src/cli.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/cli.js",
+    "test": "node --test test/*.test.js",
+    "doctor": "node src/cli.js doctor"
+  },
+  "dependencies": {
+    "ws": "^8.23.0"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "port": 8787,
+  "preferredSites": ["chatgpt", "claude", "gemini", "deepseek"],
+  "workspace": "./out",
+  "design": true,
+  "strictSettings": false,
+  "sites": {
+    "claude": {
+      "model": "Haiku 5.5",
+      "reasoning": "medium",
+      "limit": { "perHour": 20, "perDay": 100, "cooldownMinutes": 60 }
+    },
+    "gemini": { "reasoning": "high" },
+    "chatgpt": { "reasoning": "on" },
+    "deepseek": { "reasoning": "off", "search": "off" }
+  },
+  "phases": {
+    "design": { "sites": ["claude", "gemini"], "reasoning": "high" },
+    "step": { "reasoning": "low" }
+  },
+  "local": {
+    "enabled": true,
+    "baseUrl": "http://127.0.0.1:8080/v1",
+    "model": "auto",
+    "maxDigestChars": 12000
+  }
+}

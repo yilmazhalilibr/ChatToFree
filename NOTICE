@@ -1,0 +1,13 @@
+ChatToFree
+==========
+
+src/deepseek-http.js implements DeepSeek's web chat protocol (the three requests, the proof-of-work
+header and the event-stream format). The protocol was worked out by reading:
+
+  FreeDeepseekAPI  https://github.com/Blue-B/FreeDeepseekAPI
+  commit 0fa66fdcf70de0e6183179fb650bd009bdae20d7  (server.js, lib/pow.js)
+  Licensed under the Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0)
+
+The shape of the WebAssembly call in solvePow() follows lib/pow.js of that project; everything else in
+the file is written for ChatToFree. If DeepSeek changes its private API, diff the files above against
+a newer commit to see what moved.

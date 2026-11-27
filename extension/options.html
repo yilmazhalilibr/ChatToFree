@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <title>ChatToFree</title>
+    <style>
+      body { font: 14px/1.5 system-ui, sans-serif; margin: 0; padding: 16px; min-width: 300px; color: #111; background: #fff; }
+      h1 { font-size: 15px; margin: 0 0 8px; }
+      #state { font-weight: 600; }
+      .ok { color: #0a7a30; } .bad { color: #b01818; }
+      .row { display: flex; gap: 8px; align-items: center; margin: 8px 0; }
+      label { flex: 1; }
+      input[type="number"] { width: 84px; padding: 4px 6px; }
+      button { padding: 5px 10px; cursor: pointer; }
+      details { margin-top: 14px; }
+      summary { cursor: pointer; color: #555; }
+      pre { white-space: pre-wrap; font-size: 12px; color: #444; }
+    </style>
+  </head>
+  <body>
+    <h1>ChatToFree</h1>
+    <p><span id="state">kontrol ediliyor…</span></p>
+    <p style="color:#555;font-size:12px;margin:0">DeepSeek için bu eklenti gerekmez (<code>c2f kur</code>). Yalnızca ChatGPT, Claude ve Gemini için kullanılır.</p>
+    <div class="row"><button id="retry">Yeniden bağlan</button></div>
+    <details>
+      <summary>Gelişmiş</summary>
+      <div class="row"><label for="port">Port</label><input id="port" type="number" min="1" max="65535" /></div>
+      <div class="row"><label for="token">Anahtar</label><input id="token" type="text" placeholder="c2f doctor" style="flex:1" /></div>
+      <div class="row"><button id="save">Kaydet</button><button id="inspect">Sekmeleri incele</button></div>
+      <div class="row"><button id="record">Açık sekmedeki siteyi ekle</button></div>
+      <pre id="custom"></pre>
+      <pre id="tabs"></pre>
+    </details>
+    <script src="options.js"></script>
+  </body>
+</html>

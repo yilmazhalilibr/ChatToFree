@@ -1,0 +1,22 @@
+{
+  // OpenCode config for THIS project only: a free OpenCode model orchestrates, and the c2f tools
+  // let it use the user's signed-in ChatGPT / Claude / Gemini / DeepSeek tabs.
+  // (Written for the installed OpenCode 1.18 schema: `mcp.<name>` and `permission`.)
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "c2f": {
+      "type": "local",
+      "command": ["node", "src/mcp.js"],
+      "enabled": true,
+      // In OpenCode 1.18 this is the per-request timeout and it covers TOOL CALLS too (measured:
+      // a 40 s c2f_status died at 30 s with "MCP error -32001"). A build takes minutes.
+      "timeout": 1800000
+    }
+  },
+  "permission": {
+    // These spend the user's real account quota, or run commands written by a web model:
+    // always ask. Reading state and changing settings is free and stays automatic.
+    "c2f_build": "ask",
+    "c2f_chat": "ask"
+  }
+}

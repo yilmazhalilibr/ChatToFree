@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" font-family="Segoe UI, system-ui, -apple-system, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#475569"/></marker>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f7"/></linearGradient>
+  </defs>
+  <rect width="960" height="420" rx="18" fill="url(#bg)" stroke="#d6dde6"/>
+  <text x="40" y="52" font-size="24" font-weight="700" fill="#0f172a">Nasıl çalışır</text>
+  <text x="40" y="78" font-size="14" fill="#475569">İşi senin seçtiğin model yapar; DeepSeek yalnızca danışmandır ve dosyalarını görmez.</text>
+
+  <!-- Sen -->
+  <rect x="40" y="120" width="150" height="200" rx="14" fill="#ffffff" stroke="#cbd5e1"/>
+  <circle cx="115" cy="170" r="24" fill="#e0e7ff"/><circle cx="115" cy="163" r="9" fill="#4f46e5"/><path d="M98 186a17 13 0 0 1 34 0z" fill="#4f46e5"/>
+  <text x="115" y="226" font-size="17" font-weight="700" text-anchor="middle" fill="#0f172a">Sen</text>
+  <text x="115" y="250" font-size="13" text-anchor="middle" fill="#475569">isteğini yazarsın</text>
+  <text x="115" y="270" font-size="13" text-anchor="middle" fill="#475569">sonucu ve DeepSeek</text>
+  <text x="115" y="290" font-size="13" text-anchor="middle" fill="#475569">sohbetini okursun</text>
+
+  <!-- Ajan -->
+  <rect x="250" y="110" width="230" height="220" rx="14" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <rect x="250" y="110" width="230" height="40" rx="14" fill="#2563eb"/><rect x="250" y="134" width="230" height="16" fill="#2563eb"/>
+  <text x="365" y="137" font-size="16" font-weight="700" text-anchor="middle" fill="#ffffff">Ajan · seçtiğin model</text>
+  <g font-size="13.5" fill="#1e293b">
+    <text x="270" y="178">① klasöre bakar, çalıştırır</text>
+    <text x="270" y="204">② planını danışır</text>
+    <text x="270" y="230">③ kodu yazar, test eder</text>
+    <text x="270" y="256">④ yapıyı anlatır</text>
+    <text x="270" y="282">⑤ sonda kodu tek tek inceletir</text>
+    <text x="270" y="308">⑥ sana özet verir</text>
+  </g>
+
+  <!-- c2f -->
+  <rect x="540" y="130" width="160" height="180" rx="14" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="620" y="164" font-size="20" font-weight="800" text-anchor="middle" fill="#7c3aed">c2f</text>
+  <g font-size="12.5" fill="#334155" text-anchor="middle">
+    <text x="620" y="192">“ben” dili kontrolü</text>
+    <text x="620" y="214">≤ 30.000 karakter</text>
+    <text x="620" y="236">15 sn ara · yeni sohbet 2 dk</text>
+    <text x="620" y="258">tekrarı göndermez</text>
+    <text x="620" y="280">1 oturum = 1 sohbet</text>
+  </g>
+
+  <!-- DeepSeek -->
+  <rect x="760" y="120" width="160" height="200" rx="14" fill="#ffffff" stroke="#0ea5e9" stroke-width="2"/>
+  <circle cx="840" cy="168" r="24" fill="#e0f2fe"/><path d="M826 168q14-16 28 0q-14 16-28 0z" fill="#0284c7"/>
+  <text x="840" y="222" font-size="17" font-weight="700" text-anchor="middle" fill="#0f172a">DeepSeek</text>
+  <text x="840" y="246" font-size="13" text-anchor="middle" fill="#475569">senin hesabın</text>
+  <text x="840" y="266" font-size="13" text-anchor="middle" fill="#475569">tek, okunabilir</text>
+  <text x="840" y="286" font-size="13" text-anchor="middle" fill="#475569">bir sohbet</text>
+
+  <!-- arrows -->
+  <line x1="192" y1="205" x2="246" y2="205" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="246" y1="245" x2="192" y2="245" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="482" y1="200" x2="536" y2="200" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="536" y1="240" x2="482" y2="240" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="702" y1="200" x2="756" y2="200" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="756" y1="240" x2="702" y2="240" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+  <text x="509" y="190" font-size="11" text-anchor="middle" fill="#64748b">soru</text>
+  <text x="509" y="258" font-size="11" text-anchor="middle" fill="#64748b">öneri</text>
+
+  <rect x="40" y="350" width="880" height="44" rx="10" fill="#fff7ed" stroke="#fed7aa"/>
+  <text x="60" y="378" font-size="14" fill="#9a3412">“Notları JSON'da tuttum, iki komut aynı anda yazarsa ne olur, sence kilit gerekir mi?” · ajan böyle, işin sahibi gibi yazar.</text>
+</svg>

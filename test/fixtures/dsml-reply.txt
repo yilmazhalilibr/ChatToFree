@@ -1,0 +1,14 @@
+
+
+<｜｜DSML｜｜ calls>
+<｜｜DSML｜｜ invoke name="write">
+<｜｜DSML｜｜ parameter name="filePath" string="true">D:/proje/deneme/merhaba.txt</｜｜DSML｜｜ parameter>
+<｜｜DSML｜｜ parameter name="content" string="true">Merhaba
+Dünya "tırnak"
+</｜｜DSML｜｜ parameter>
+</｜｜DSML｜｜ invoke>
+<｜｜DSML｜｜ invoke name="bash">
+<｜｜DSML｜｜ parameter name="command" string="true">ls -l merhaba.txt</｜｜DSML｜｜ parameter>
+<｜｜DSML｜｜ parameter name="timeout" string="false">5000</｜｜DSML｜｜ parameter>
+</｜｜DSML｜｜ invoke>
+</｜｜DSML｜｜ calls>
